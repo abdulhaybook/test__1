@@ -1,5 +1,5 @@
 export const colors = {
-  food: '#A94442',
+  food: 'blue',
   snakeEnabled: '#5CB85C',
   snakeDisabled: '#555',
   counter: '#999',
