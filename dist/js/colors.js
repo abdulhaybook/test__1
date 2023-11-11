@@ -1,6 +1,6 @@
 export const colors = {
   food: 'blue',
-  snakeEnabled: 'orange',
+  snakeEnabled: 'black',
   snakeDisabled: '#555',
   counter: '#999',
   text: '#337AB7'
