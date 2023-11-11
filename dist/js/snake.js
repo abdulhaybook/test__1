@@ -5,7 +5,7 @@ export class Snake {
   constructor(game) {
     this.game = game;
     this.size = null;           // Width of the snake
-    this.lives = 3;
+    this.lives = 0 ;
     this.velocity = null;
     this.color = colors.snakeEnabled;
     this.direction = 'left';
@@ -18,7 +18,7 @@ export class Snake {
     this.canvas = this.game.canvas;
     this.size = Math.floor(this.canvas.width * this.canvas.height / 12000);
     this.lives = lives;
-    this.velocity = (velocity != null ? velocity : this.size * 8);
+    this.velocity = (velocity != null ? velocity : this.size * 4);
     this.direction = 'left';
     this.x = this.canvas.width / 2;
     this.y = this.canvas.height / 2;
