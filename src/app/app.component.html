@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+  
+
+  <main>
+    <header class="brand">
+ <img src="../assets/Без названия.png" class="lgog">
+ 
+    </header>
+    <section class="content">
+      
+    </section>
+  </main>
+<div class="container">
+
+  <section class="Search">
+   
+      <input class="inputs" type="text" placeholder="Filter by city">
+      <button class="primary" type="button">Search</button>
+  
+  </section>
+
+<div class="items">
+  <div *ngFor="let d of getjsonvalue['products']" class="item">
+    <img src={{d.thumbnail}} alt="">
+
+ <p>
+  {{d.title}}
+
+ </p>
+ 
+  <h4>$ {{d.price}} 
+
+
+ <div class="nikto"></div>
+
+  </h4>
+  <a class="ps" href={{d.images[0]}}n>learn more</a>
+ 
+  </div>
+</div>
+</div>
+
+
+<style>
+  .results {
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+}
+
+input[type="text"] {
+  border: solid 1px var(--primary-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: 30%;
+}
+
+button {
+  padding: 10px;
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .results {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  input[type="text"] {
+      width: 70%;
+  }   
+}
+
+@media (max-width: 499px) {
+  .results {
+      grid-template-columns: 1fr;
+  }    
+}
+</style>
+</body>
+</html>
